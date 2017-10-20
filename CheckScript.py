@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import cv2
 
-Using The Training xml File
+#Using The Training xml File
 fisherface=cv2.createFisherFaceRecognizer()
 fisherface.load("trainedmodel.xml")
 
