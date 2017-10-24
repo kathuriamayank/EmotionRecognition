@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[1]:
+# In[3]:
 
 
 import numpy as np
@@ -20,7 +20,7 @@ img=cv2.imread("image.jpg")
 cap=cv2.VideoCapture(0)
 
 
-# In[2]:
+# In[4]:
 
 
 fisherface=cv2.createFisherFaceRecognizer()
@@ -44,7 +44,7 @@ while 1:
        
         
 
-    '''img=cv2.imread("happy.png")
+        '''img=cv2.imread("Emoji/happy.png")
         gray=np.array(cv2.cvtColor(img,cv2.COLOR_BGR2GRAY))
         gray=cv2.resize(gray,(h,w))
         img_gray[y:y+h,x:x+w]=gray
@@ -63,32 +63,27 @@ while 1:
         pred,conf=fisherface.predict(face_gray)
         if pred==0:
             print "Angry"
-            '''emoji=cv2.imread("Emoji/anger.png")
-            emoji_gray=cv2.cvtColor(emoji,cv2.COLOR_BGR2GRAY)
-            emoji_gray=cv2.resize(emoji_gray,(268,268))
+            emoji=cv2.imread("Emoji/anger.png")
+            emoji_gray=np.array(cv2.cvtColor(emoji,cv2.COLOR_BGR2GRAY))
+            emoji_gray=cv2.resize(emoji_gray,(h,w))
             img_gray[y:y+h,x:x+w]=emoji_gray
-            cv2.imshow("FaceSwappedWindow",face_gray)'''
+            cv2.imshow("FaceSwappedWindow",img_gray)
         if pred==1:
             print "Happy"
-            '''emoji=cv2.imread("Emoji/happy.png")
-            emoji_gray=cv2.cvtColor(emoji,cv2.COLOR_BGR2GRAY)
-            emoji_gray=cv2.resize(emoji_gray,(268,268))
+            emoji=cv2.imread("Emoji/happy.png")
+            emoji_gray=np.array(cv2.cvtColor(emoji,cv2.COLOR_BGR2GRAY))
+            emoji_gray=cv2.resize(emoji_gray,(h,w))
             img_gray[y:y+h,x:x+w]=emoji_gray
-            cv2.imshow("FaceSwappedWindow",face_gray)'''
-        if pred==2:
-            print "Sad"
-            '''emoji=cv2.imread("Emoji/sadness.png")
-            emoji_gray=cv2.cvtColor(emoji,cv2.COLOR_BGR2GRAY)
-            emoji_gray=cv2.resize(emoji_gray,(268,268))
-            img_gray[y:y+h,x:x+w]=emoji_gray
-            cv2.imshow("FaceSwappedWindow",face_gray)'''
+            cv2.imshow("FaceSwappedWindow",img_gray)
+            
+
         if pred==3:
             print "Surprise"
-            '''emoji=cv2.imread("Emoji/surprise.png")
-            emoji_gray=cv2.cvtColor(emoji,cv2.COLOR_BGR2GRAY)
-            emoji_gray=cv2.resize(emoji_gray,(268,268))
+            emoji=cv2.imread("Emoji/surprise.png")
+            emoji_gray=np.array(cv2.cvtColor(emoji,cv2.COLOR_BGR2GRAY))
+            emoji_gray=cv2.resize(emoji_gray,(h,w))
             img_gray[y:y+h,x:x+w]=emoji_gray
-            cv2.imshow("FaceSwappedWindow",face_gray)'''
+            cv2.imshow("FaceSwappedWindow",img_gray)
         
         
         
@@ -101,7 +96,6 @@ cv2.destroyAllWindows()
 
 
 # In[ ]:
-
 
 
 
