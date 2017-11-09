@@ -17,7 +17,7 @@ cap=cv2.VideoCapture(0)
 
 
 fisherface=cv2.createFisherFaceRecognizer()
-fisherface.load("trainedwithoutsad.xml")
+fisherface.load("final_trained_model.xml")
 while 1:
     cv2.namedWindow("RawWindow")
     cv2.namedWindow("FaceSwappedWindow")
